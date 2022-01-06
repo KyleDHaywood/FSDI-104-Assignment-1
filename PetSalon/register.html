@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <script src="https://kit.fontawesome.com/0737e9aa50.js" crossorigin="anonymous"></script>
+    <title>Fashion Pet</title>
+  </head>
+  <body class= bg-warning>
+    <header class="container bg-dark text-white pt-5 pb-4">
+      <ul class="nav justify-content-end">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="index.html"
+            >Home</a
+          >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" href="#">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" href="#">Services</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link">Register</a>
+        </li>
+      </ul>
+      <h1 class="display-1">The Fashion Pet</h1>
+    </header>
+
+    <main class="container bg-light text-black pt-5 pb-4">
+      <h2>Register A Pet</h2>
+      <form id="petInfo">
+        <label for="txtPetName">Pet's Name: </label>
+        <input type="text" id="txtPetName" placeholder="Pet's Name" />
+        
+        <input list="dlGenderOptions" id="dlGender" placeholder="Select Gender" />
+          <datalist id="dlGenderOptions">
+            <option value="Male">
+            <option value="Female">
+          </datalist>
+        
+        <label for="numAge">Age:</label>
+        <input type="number" id="numAge" min="0" placeholder="Pet's Age"/>
+
+        <label for="txtBreed">Breed: </label>
+        <input type="text" id="txtBreed" />
+
+        <input type="checkbox" id="ckShampoo" />
+        <checkbox/>Shampoo</checkbox>
+        <input type="checkbox" id="ckGrooming" />
+        <checkbox/>Grooming</checkbox>
+        <input type="checkbox" id="ckMeal" />
+        <checkbox/>Gourmet Meal</checkbox>
+        <input type="checkbox" id="ckPlay" />
+        <checkbox/>Playground</checkbox>
+        
+        <label for="txtOwner">Owner's Name: </label>
+        <input type="text" id="txtOwner" placeholder="Owner's Name" />
+        
+        <label for="txtContactNumber">Contact #: </label>
+        <input type="text" id="txtContactNumber" placeholder="Contact Info"/>
+        
+        <input type="button" value="Submit" onclick="getInfo()">
+      </form>
+      <h2>Check the Registry</h2>
+      <button onclick="displayNumberOfPets()">Check Registry</button>
+      <!-- add the next fields for name, gender, breed, service, owner name, contact number -->
+    </main>
+
+    
+    
+    <footer class="bg-dark text-white pt-5 pb-4"  id="footer-info">
+      <div class="container text-center text-md-left">
+        <div class="row text-center text-md-left">
+          <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+            <h5 class="text-uppercase mb-4 font-weight-bold text-warning">Company Name</h5>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus illo laudantium voluptate fuga laboriosam ratione iste eveniet? Voluptatibus eum dolore molestias porro? Ab incidunt eum fuga, pariatur obcaecati esse quasi.</p>
+          </div>
+          <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+            <h5 class="text-uppercase mb-4 font-weight-bold text-warning">Services</h5>
+            <p>
+              <a href="#" class="text-white" style="text-decoration:none;">Luxury Spa</a>
+            </p>
+            <p>
+              <a href="#" class="text-white" style="text-decoration:none;">Grooming</a>
+            </p>
+            <p>
+              <a href="#" class="text-white" style="text-decoration:none;">Gourmet Meals</a>
+            </p>
+            <p>
+              <a href="#" class="text-white" style="text-decoration:none;">Playgrounds</a>
+            </p>
+            <p>
+              <a href="#" class="text-white" style="text-decoration:none;">Training</a>
+            </p>
+          </div>
+          <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+            <h5 class="text-uppercase mb-4 font-weight-bold text-warning">Useful Links</h5>
+            <p>
+              <a href="#" class="text-white" style="text-decoration:none;">Your Account</a>
+            </p>
+            <p>
+              <a href="#" class="text-white" style="text-decoration:none;">Catering</a>
+            </p>
+            <p>
+              <a href="#" class="text-white" style="text-decoration:none;">Become an Affiliate</a>
+            </p>
+            <p>
+              <a href="#" class="text-white" style="text-decoration:none;">Help</a>
+            </p>
+          </div>
+          <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+            <h5 class="text-uppercase mb-4 font-weight-bold text-warning">Contacts</h5>
+            <p>
+              <i class="fas fa-home mr-3"></i> 123 Palm Ave.
+              San Diego, California, 93944
+              </p>
+              <p>
+                <i class="fas fa-envelope mr-3"></i> TheFashionPet@gmail.com</p>
+              <p>
+                <i class="fas fa-phone mr-3"></i> +1 3168548988</p>
+              <p>
+                <i class="fas fa-print mr-3"></i> +92 058 874 25</p>
+          </div>
+        </div>
+        <hr class="mb-4">
+        <div class="row-align-items-center">
+          <div class="col-md-7 col-lg-8">
+            <p>Copyright <i class="fas fa-copyright text-decoration:none"></i> 2021 All Right Reserved by:
+            <a href="#" class="text-warning"><strong>KyleStudio.tech</strong></a></p>
+          </div>
+          <div class="col-md-5 col-lg-4">
+            <div class="text-center text-md-right">
+              <ul class="list-unstyled list-inline">
+                <li class="list-inline-item">
+                  <a href="#" class="btn-floating btn-sm text-white" style="font-size:23px;"><i class="fab fa-facebook"></i>
+                  </a>
+                </li>
+                <li class="list-inline-item">
+                  <a href="#" class="btn-floating btn-sm text-white" style="font-size:23px;"><i class="fab fa-twitter"></i>
+                  </a>
+                </li> <li class="list-inline-item">
+                  <a href="#" class="btn-floating btn-sm text-white" style="font-size:23px;"><i class="fab fa-google-plus"></i>
+                  </a>
+                </li> <li class="list-inline-item">
+                  <a href="#" class="btn-floating btn-sm text-white" style="font-size:23px;"><i class="fab fa-linkedin"></i>
+                  </a>
+                </li> <li class="list-inline-item">
+                  <a href="#" class="btn-floating btn-sm text-white" style="font-size:23px;"><i class="fab fa-youtube"></i>
+                  </a>
+                </li>
+
+              </ul>
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="/scripts/register.js"></script>
+  </body>
+</html>
