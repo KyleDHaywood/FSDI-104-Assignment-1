@@ -1,0 +1,28 @@
+.error {
+  border-color: brown;
+}
+.error-label {
+  color: brown;
+}
+.my-card {
+  width: 200px;
+  border-color: 1px gray;
+  padding: 5px;
+  margin: 5px;
+  display: inline-flex;
+  box-shadow: 5px 5px 5px orangered;
+  backdrop-filter: opacity(0.5);
+}
+.checkbox {
+  border-width: solid 10px;
+}
+main {
+  background-image: url("/img/background.jpg");
+  background-color: palegoldenrod;
+  filter: opacity(0.9);
+  font-size: 28px;
+  color: blueviolet;
+}
+main.image {
+  filter: opacity(0.5);
+}

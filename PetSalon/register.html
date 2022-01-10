@@ -11,6 +11,7 @@
       crossorigin="anonymous"
     />
     <script src="https://kit.fontawesome.com/0737e9aa50.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/styles/style.css">
     <title>Fashion Pet</title>
   </head>
   <body class= bg-warning>
@@ -35,6 +36,27 @@
     </header>
 
     <main class="container bg-light text-black pt-5 pb-4">
+      <br>
+      <br>
+      <br>
+      <div id="white-bg">
+      <div id="petList">
+        <div class="card my-card">
+          <h2>Scooby</h2>
+          <label>Name: "Scooby"</label>
+          <label>Age: 50</label>
+          <label>Gender: "M"</label>
+          <label>Breed: "Great Dane"</label>
+          <label>"Shampoo"</label>
+          <label>"Grooming"</label>
+          <label>"Meal"</label>
+          <label>"Play"</label>
+          <label>Owner: "Shaggy"</label>
+          <label>Phone: "615-555-5555"</label>
+          <button id="removePet" onclick="removePet()">Remove Pet</button>
+        </div>
+
+      </div>
       <h2>Register A Pet</h2>
       <form id="petInfo">
         <label for="txtPetName">Pet's Name: </label>
@@ -42,8 +64,8 @@
         
         <input list="dlGenderOptions" id="dlGender" placeholder="Select Gender" />
           <datalist id="dlGenderOptions">
-            <option value="Male">
-            <option value="Female">
+            <option value="M">
+            <option value="F">
           </datalist>
         
         <label for="numAge">Age:</label>
@@ -52,13 +74,13 @@
         <label for="txtBreed">Breed: </label>
         <input type="text" id="txtBreed" />
 
-        <input type="checkbox" id="ckShampoo" />
+        <input type="checkbox" class="checkbox" id="ckShampoo" />
         <checkbox/>Shampoo</checkbox>
-        <input type="checkbox" id="ckGrooming" />
+        <input type="checkbox" class="checkbox" id="ckGrooming" />
         <checkbox/>Grooming</checkbox>
-        <input type="checkbox" id="ckMeal" />
+        <input type="checkbox" class="checkbox" id="ckMeal" />
         <checkbox/>Gourmet Meal</checkbox>
-        <input type="checkbox" id="ckPlay" />
+        <input type="checkbox" class="checkbox" id="ckPlay" />
         <checkbox/>Playground</checkbox>
         
         <label for="txtOwner">Owner's Name: </label>
@@ -72,6 +94,7 @@
       <h2>Check the Registry</h2>
       <button onclick="displayNumberOfPets()">Check Registry</button>
       <!-- add the next fields for name, gender, breed, service, owner name, contact number -->
+    </div>
     </main>
 
     
