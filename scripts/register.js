@@ -43,12 +43,14 @@ let saloon = {
     */
   ],
 };
+
 function Service(shampoo, grooming, meal, play) {
   this.shampoo = shampoo;
   this.grooming = grooming;
   this.meal = meal;
   this.play = play;
 }
+
 function PetGenerator(
   petName,
   age,
@@ -68,15 +70,16 @@ function PetGenerator(
   this.owner = owner;
   this.contact = contact;
   this.service = new Service(shampoo, grooming, meal, play);
+  this.id = x++;
 }
 
-function checkId(variable, id) {
+function checkId(variable, id, isValid) {
   if (variable.length < 1) {
     document.getElementById(id).classList.add("error");
     return false;
   } else {
     document.getElementById(id).classList.remove("error");
-    return true;
+    return true && isValid;
   }
 }
 
@@ -95,10 +98,10 @@ function createCard(pet) {
   <label>Breed: ${pet.breed}</label>
   <label>Owner: ${pet.owner}</label>
   <label>Phone: ${pet.contact}</label>
-  <label>${pet.shampoo}</label>
-  <label>${pet.grooming}</label>
-  <label>${pet.meal}</label>
-  <label>${pet.play}</label>
+  <label>${pet.service.shampoo}</label>
+  <label>${pet.service.grooming}</label>
+  <label>${pet.service.meal}</label>
+  <label>${pet.service.play}</label>
   <button class="btn btn-danger btn-sm" onclick="removePet(${pet.id})">Delete</button>
 </div>`;
 }
@@ -118,7 +121,7 @@ function getInfo() {
 
   let shampoo = document.getElementById("ckShampoo").checked;
   isValid = checkId(shampoo, "ckShampoo");
-
+  console.log(shampoo);
   let grooming = document.getElementById("ckGrooming").checked;
   isValid = checkId(grooming, "ckGrooming");
 
@@ -139,6 +142,7 @@ function getInfo() {
     document.getElementById("ckGrooming").classList.remove("error");
     document.getElementById("ckMeal").classList.remove("error");
     document.getElementById("ckPlay").classList.remove("error");
+    isValid = true;
   } else {
     document.getElementById("ckShampoo").classList.add("error");
     document.getElementById("ckGrooming").classList.add("error");
@@ -158,6 +162,7 @@ function getInfo() {
       grooming,
       meal,
       play
+      //new Service(shampoo, grooming, meal, play)
     );
     saloon.pets.push(pet);
 
@@ -170,6 +175,7 @@ function getInfo() {
 }
 
 function displayInfo() {}
+let x = 0;
 function displayPetNames() {
   for (let i = 0; i < saloon.pets.length; i++) {
     console.log(saloon.pets[i].name);
